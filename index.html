@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tabela de produtos vendidos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <section class="content">
+        <h1>Produtos vendidos pela Nunes Sports</h1>
+        <br>
+
+        <div class="ver_tabela">
+            <form class="form" methods="POST" action="./newProduct.php">
+                <input type="submit" name="ver" value="Visualizar Tabela Completa">
+            </form>
+        </div>
+        <br>
+
+        <table border="0px" width="100%">
+            <tr>
+                <td>
+                    <h2>Adicionar novo produto</h2>
+
+                    <br>
+                    <div class="adicionar">
+                        <form class="form" methods="POST" action="./newProduct.php">
+                            <input class="field" name="nome" placeholder="Nome do Produto">
+                            <input class="field" name="codigo" placeholder="Código do Produto">
+                            <textarea class="field" name="descricao" placeholder="Descrição do Produto"></textarea>
+                            <input class="field" name="preco" placeholder="Preço do Produto">
+                            <input type="submit" name="adicionar" value="Adicionar">
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <h2>Editar produto</h2>
+
+                    <br>
+                    <div class="editar">
+                        <form class="form" methods="POST" action="./newProduct.php">
+                            <input class="field" name="id" placeholder="ID do Produto">
+                            <textarea class="field" name="coluna" placeholder="Coluna a ser alterada. Insira um desses valores: 
+                                                                                Nome_Produto, Codigo_Produto, Descricao_Produto ou Preco_Produto"></textarea>
+                            <input class="field" name="novo" placeholder="Novo Valor da Coluna">
+                            <input type="submit" name="editar" value="Editar">
+                        </form>
+                    </div>
+                </td>
+                <td>
+                    <h2>Deletar produto</h2>
+
+                    <br>
+                    <div class="deletar">
+                        <form class="form" methods="POST" action="./newProduct.php">
+                            <input class="field" name="id_del" placeholder="ID do Produto">
+                            <input type="submit" name="deletar" value="Deletar">
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        
+    </section>
+    
+
+  </body>
+</html>
